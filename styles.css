@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fontMain: "Barlow", sans-serif;
+    --fontSecond: "Fraunces", serif;
+    --darkDesaturade: hsl(212, 27%, 19%);
+    --desaturadeCyan: hsl(167, 40%, 24%);
+    --sizeTitle: 3rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: var(--fontMain);
+    list-style: none;
+}
+
+body{
+    height: 100%;
+    background-color: #a4ded0;
+
+    .content__all{
+        width: 100%;
+        .contentHero{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url(images/desktop/image-header.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0 3rem;
+
+            color: white;
+
+            .contentNavbar{
+                position: relative;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .logo{
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+
+                .navbar{
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    gap: 2rem;
+
+                    .linksNavbar{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        text-decoration: none;
+                        
+                        font-size: 14px;
+                        border-radius: 24px;
+                        font-weight: 460;
+                        transition: .3s all;
+                        &:last-of-type{
+                            padding: 1rem 1.8rem;
+                            background-color: white;
+                            color: black;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                        &:hover{
+                            padding: 1rem 1.8rem;
+                            background-color: rgba(255, 255, 255, 0.37);
+                            color: white;
+                        }
+                    }
+                }
+                .iconMenuBar{
+                    display: none;
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+
+            .title{
+                font-size: var(--sizeTitle);
+                text-align: center;
+                font-family: var(--fontSecond);
+                letter-spacing: 18px;
+                text-transform: uppercase;
+                margin-top: 7rem;
+            }
+
+            .arrowDown{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+        }
+
+
+        .content__brand-engagement__and__audience{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+
+            .stylesForColumn{
+                .contentDescription{
+                    width: 50%;
+                    padding: 6rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .titleDescription{
+                        font-size: 2.5rem;
+                        margin-bottom: 2rem;
+                        font-family: var(--fontSecond);
+                        font-weight: bold;
+                        color: var(--darkDesaturade);
+                    }
+
+                    .txt{
+                        width: 400px;
+                        line-height: 1.5rem;
+                        color: hsl(232, 10%, 55%);
+                        font-weight: 500;
+                        margin-bottom: 2rem;
+                    }
+
+                    .learnMore{
+                        position: relative;
+                        width: 130px;
+                        text-transform: uppercase;
+                        font-family: var(--fontSecond);
+                        color: var(--darkDesaturade);
+                        text-decoration: none;
+                        font-weight: bolder;
+                        z-index: 1;
+                    }
+
+                    .underlineYellow, .underlineSoft{
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: -2px;
+                            width: 100%;
+                            height: 8px;
+                            border-radius: 12px;
+                            z-index: -1;
+                            transition: .2s ease;
+                        }
+                    }
+                    .underlineYellow{
+                        &::before{background-color: hsla(51, 100%, 49%, 0.303);}
+                        &:hover{&::before{background-color: hsla(51, 100%, 49%)}}
+                    }
+                    .underlineSoft{
+                        &::before{background-color: hsl(7, 99%, 70%, 0.303);}
+                        &:hover{&::before{background-color: hsla(7, 99%, 70%)}}
+                    }
+                }
+            }
+
+            .contentBrand{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                .contentImageEggBrand{
+                    width: 50%;
+                    height: 700px;
+                    background-image: url(images/desktop/image-transform.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }  
+            
+            .contentStand{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                .contentImageGlass{
+                    width: 50%;
+                    height: 700px;
+                    background-image: url(images/desktop/image-stand-out.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .contentDesingGraphic{
+                width: 100%;
+                height: 100%;
+                display: flex;
+
+                .stylesForDesingGraphic{
+                    width: 50%;
+                    height: 700px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: end;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 6rem;
+
+                    .titleDesing{
+                        font-family: var(--fontSecond);
+                        font-size: 2rem;
+                        color: var(--darkDesaturade);
+                        font-weight: bold;
+                    }
+
+                    .txtDesing{
+                        width: 370px;
+                        text-align: center;
+                        line-height: 1.5rem;
+                        margin-top: 2rem;
+                        font-weight: 550;
+                    }
+
+                    .graphicT, .txtGraphic{color: var(--desaturadeCyan);}
+                    .photoT, .txtPhoto{color: hsl(198, 62%, 26%);}
+
+                }
+                .contentImageCherry__and_information{background-image: url(images/desktop/image-graphic-design.jpg);}
+                .contentImageOrange__and_information{background-image: url(images/desktop/image-photography.jpg);}
+
+            }
+        }
+
+        .content__clientTestimonial{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+
+            .titleClienteTestimonial{
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: hsl(210, 4%, 67%);
+                letter-spacing: 9px;
+                font-family: var(--fontSecond);
+            }
+
+            .clientTestimonial{
+                width: 80%;
+                height: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 9rem;
+                gap: 4rem;
+
+                .testimonialBox{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 2rem;
+                    border-radius: 24px;
+                    transition: .2s ease;
+                    cursor: default;
+                    &:hover{
+                        box-shadow: 0px 0px 24px hsla(211, 28%, 19%, 0.07);
+                        transform: scale(1.01);
+                    }
+                    .imgClient{
+                        width: 90px;
+                        height: 90px;
+                        border-radius: 50%;
+                        margin-bottom: 3rem;
+                    }
+
+                    .txtTestimonial{
+                        width: 300px;
+                        text-align: center;
+                        margin-bottom: 4rem;
+                        line-height: 1.5rem;
+                        color: var(--darkDesaturade);
+                        font-weight: 460;
+                    }
+
+                    .content__infoClient{
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        gap: .5rem;
+                        .nameClient{
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: var(--fontSecond);
+                            color: var(--darkDesaturade);
+                        }
+
+                        .proffeshion{
+                            font-size: 14px;
+                            color: hsla(232, 10%, 55%, 0.697);
+                            font-weight: 450;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .content__visualDesing{
+            width: 100%;
+            height: 60vh;
+            display: grid;
+            grid-template-areas: "Milk Orang Cone SugarCubes";
+
+            .stylesContentVisualDesing{
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .Milk{
+                grid-area: Milk;
+                background-image: url(images/desktop/image-gallery-milkbottles.jpg);
+            }
+            .Orange{
+                grid-area: Orang;
+                background-image: url(images/desktop/image-gallery-orange.jpg);
+            }
+            .Cone{
+                grid-area: Cone;
+                background-image: url(images/desktop/image-gallery-cone.jpg);
+            }
+            .SubarCubes{
+                grid-area: SugarCubes;
+                background-image: url(images/desktop/image-gallery-sugarcubes.jpg);
+            }
+        }
+
+        .contentFooter{
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+            .navbarFooter{
+                margin: 3rem 0 5rem 0;
+                display: flex;
+                gap: 3rem;
+
+                .linksNavbar{
+                    text-decoration: none;
+                    color: hsl(168, 34%, 41%);
+                    font-weight: 500;
+                    
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+
+            .content__socialMedia{
+                display: flex;
+                gap: 1.5rem;
+
+                .socialMedia{
+                    color: hsl(168, 34%, 41%);
+                    font-size: 25px;
+                    :hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 900px){
+    :root{
+        --sizeTitle: 3rem;
+    }
+    body{
+        width: 100%;
+
+        .content__all{
+            .contentHero{
+                background-image: url(images/mobile/image-header.jpg);
+                padding: 0 1.2rem;
+                .contentNavbar{
+                    .navbar{
+                        position: absolute;
+                        display: none;
+                        flex-direction: column;
+                        background-color: white;
+                        width: 100%;
+                        height: fit-content;
+                        padding: 4rem 0 3rem 0;
+                        top: 100%;
+                        z-index: 1;
+
+                        .linksNavbar{
+                            color: hsl(232, 10%, 55%);
+
+                            &:last-of-type{
+                                background-color: hsl(51, 100%, 49%);
+                            }
+
+                            &:hover{
+                                color: black;
+                                background-color: hsla(206, 4%, 67%, 0.189);
+                            }
+                        }
+
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background-color: white;
+                            width: 0;
+                            height: 0;
+                            border-top: 24px solid #3dbeff;
+                            border-right: 24px solid transparent;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            height: 24px;
+                            background-color: #3dbeff;
+                            z-index: -1;
+                        }
+                    }
+                    .iconMenuBar{
+                        display: block;
+                    }
+                }
+
+                .title{
+                    letter-spacing: 2px;
+                    margin-top: 6rem;
+                }
+
+                
+            }
+
+            
+
+            .content__brand-engagement__and__audience{
+
+                .stylesForColumn{
+                    .contentDescription{
+                        width: 100%;
+                        text-align: center;
+                        padding: 4rem 2rem;
+
+                        .titleDescription{
+                            font-size: 2.2rem;
+                        }
+
+                        .txt{
+                            width: 100%;
+                        }
+                    }
+                }
+                .contentBrand{
+                    display: block;
+                    .contentImageEggBrand{
+                        width: 100%;
+                        height: 400px;
+                        background-image: url(images/mobile/image-transform.jpg);
+                    }
+                }
+
+                .contentStand{
+                    display: block;
+                    .contentImageGlass{
+                        width: 100%;
+                        height: 400px;
+                        background-image: url(images/mobile/image-stand-out.jpg);
+                    }
+                }
+
+                .contentDesingGraphic{
+                    display: block;
+    
+                    .stylesForDesingGraphic{
+                        width: 100%;
+                        height: 600px;
+
+                        .titleDesing{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .contentImageCherry__and_information{background-image: url(images/mobile/image-graphic-design.jpg);}
+                    .contentImageOrange__and_information{background-image: url(images/mobile/image-photography.jpg);}
+                }
+            }
+
+            .content__clientTestimonial{
+                display: block;
+                width: 100%;
+                height: 100%;
+
+                .titleClienteTestimonial{
+                    padding-top: 4rem;
+                    font-size: 14px;
+                    text-align: center;
+                    width: 100%;
+                    letter-spacing: 5px;
+                }
+
+                .clientTestimonial{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    margin: 0;
+                    padding: 2rem;
+
+                    .testimonialBox{
+                        width: 100%;
+                        height: fit-content;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .content__visualDesing{
+                height: 60vh;
+                grid-template-areas: "Milk Milk Orang Orang"
+                                     "Cone Cone SugarCubes SugarCubes";
+                .Milk{
+                    grid-area: Milk;
+                    background-image: url(images/mobile/image-gallery-milkbottles.jpg);
+                }
+                .Orange{
+                    grid-area: Orang;
+                    background-image: url(images/mobile/image-gallery-orange.jpg);
+                }
+                .Cone{
+                    grid-area: Cone;
+                    background-image: url(images/mobile/image-gallery-cone.jpg);
+                }
+                .SubarCubes{
+                    grid-area: SugarCubes;
+                    background-image: url(images/mobile/image-gallery-sugar-cubes.jpg);
+                }
+            }
+
+            .contentFooter{
+                padding: 4rem 2rem;
+                .navbarFooter{
+                    gap: 2rem;
+                }
+                .content__socialMedia{.socialMedia{font-size: 20px;}}
+            }
+        }
+    }
+}
